@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-between">
+    <div>
+        <h3>Обычная форма</h3>
+        <app-form (onAdd)="addItem($event)"></app-form>
+    </div>
+    <div>
+        <h3>Реактивная форма</h3>
+        <app-reactive-form (onAdd)="addItem($event)"></app-reactive-form>
+    </div>
+</div>
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Должность</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let obj of someObjects">
+                <td>
+                    <p>{{obj.name}}</p>
+                </td>
+                <td>
+                    <p>{{obj.secondName}}</p>
+                </td>
+                <td>
+                    <p>{{obj.job}}</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
